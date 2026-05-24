@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import App from './App.jsx'
 import './index.css'
 
-// Apply saved theme immediately before first render to avoid flash
+// Apply saved theme immediately before first railway to avoid flash
 const savedTheme = localStorage.getItem('theme') || 'night'
 document.documentElement.setAttribute('data-theme', savedTheme)
 

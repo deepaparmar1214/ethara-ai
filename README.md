@@ -4,12 +4,12 @@ A full-stack project management application built with **Django REST Framework**
 
 ## 🔗 Live URL
 
-> **Backend:** [https://ethara-ai-9qt2.onrender.com]  
+> **Backend:** [https://ethara-ai-production-47a7.up.railway.app/admin/login/?next=/admin/]  
 > **Frontend:** [https://ethara-ai-ruddy.vercel.app]
 
 ## 📦 GitHub Repository
 
-> [https://github.com/Parmardeepa/ethara-ai]
+> [https://github.com/deepaparmar1214/ethara-ai]
 
 ---
 
@@ -21,7 +21,7 @@ A full-stack project management application built with **Django REST Framework**
 | Auth        | JWT via `djangorestframework-simplejwt`   |
 | Frontend    | React 18, Vite, TanStack Query, Zustand   |
 | Database    | SQLite (dev) / PostgreSQL (production)    |
-| Deployment  | Render (Backend + PostgreSQL services)     |
+| Deployment  | Railway (Backend + Frontend services)     |
 | HTTP Client | Axios with request/response interceptors  |
 | Styling     | Vanilla CSS — Dark mode design system     |
 
@@ -151,7 +151,7 @@ Frontend runs at: `http://localhost:5173`
 
 ---
 
-## 🚂 Deployment Notes (Render + Vercel)
+## 🚂 Deployment Notes (Railway)
 
 ### Backend Service
 - **Root directory:** `backend/`
@@ -161,16 +161,16 @@ Frontend runs at: `http://localhost:5173`
   ```
   SECRET_KEY=<strong-random-key>
   DEBUG=False
-  DATABASE_URL=<Render PostgreSQL database URL>
-  CORS_ALLOWED_ORIGINS=https://ethara-ai-ruddy.vercel.app 
-  ALLOWED_HOSTS=ethara-ai-9qt2.onrender.com
+  DATABASE_URL=<auto-set by Railway PostgreSQL plugin>
+  CORS_ALLOWED_ORIGINS=https://your-frontend.railway.app 
+  ALLOWED_HOSTS=your-backend.railway.app
   ```
 
 ### Frontend Service
 - **Root directory:** `frontend/`
 - **Build command:** `npm run build`
 - **Start command:** `npx serve dist -p $PORT`
-- **Environment variable:** `VITE_API_URL=https://ethara-ai-9qt2.onrender.com`
+- **Environment variable:** `VITE_API_URL=https://your-backend.railway.app`
 
 ### ☑ Validation Checklist
 - [x] POST `/api/auth/register/` creates user and returns JWT tokens
